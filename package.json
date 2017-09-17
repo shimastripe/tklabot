@@ -7,6 +7,7 @@
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
+    "hubot-github-status": "^0.2.1",
     "hubot-help": "^0.2.2",
     "hubot-heroku-keepalive": "^1.0.3",
     "hubot-redis-brain": "0.0.4",
