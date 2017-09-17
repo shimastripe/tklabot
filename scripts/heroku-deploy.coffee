@@ -47,7 +47,7 @@ module.exports = (robot) ->
 
 	robot.router.post '/heroku/deploy-done', (req, res) ->
 		console.log 0
-		robot.brain.once 'loaded', () =>
+		robot.brain.once 'save', () =>
 			attachment = {}
 			console.log 1
 
