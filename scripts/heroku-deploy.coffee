@@ -46,8 +46,10 @@ module.exports = (robot) ->
 		res.send channelFlag
 
 	robot.router.post '/heroku/deploy-done', (req, res) ->
+		console.log 0
 		robot.brain.once 'loaded', () =>
 			attachment = {}
+			console.log 1
 
 			# color = good, warning, danger
 			if res.statusCode is 200
@@ -58,6 +60,7 @@ module.exports = (robot) ->
 					color: 'good'
 					mrkdwn_in: ['text']
 					}
+				console.log 2
 			else if (res.statusCode is 500) or (res.statusCode is 503)
 				# deploy失敗してるとそもそもこれを受け取れないから考えないといけない
 				msg = "[deploy] crashed - #{req.body.app}(#{req.body.release})"
@@ -70,6 +73,7 @@ module.exports = (robot) ->
 
 			notifyList = robot.brain.get('DEPLOY_NOTIFY_LIST') ? {}
 			Object.keys(notifyList).forEach (key) ->
+				console.log 3
 				val = @[key]
 				if val
 					robot.messageRoom key, {attachments: [attachment]}
