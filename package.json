@@ -5,6 +5,7 @@
   "author": "Go Takagi <takagi@shimastripe.com>",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
+    "coffeescript": "^1.12.7",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-github-status": "^0.2.1",
