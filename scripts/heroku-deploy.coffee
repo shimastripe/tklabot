@@ -46,7 +46,6 @@ module.exports = (robot) ->
 		res.send channelFlag
 
 	robot.router.post '/heroku/deploy-done', (req, res) ->
-		console.log "---------------------------------------------------------------------"
 		robot.brain.once 'save', () =>
 			attachment = {}
 
