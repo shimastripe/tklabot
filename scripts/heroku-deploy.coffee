@@ -46,6 +46,7 @@ module.exports = (robot) ->
 		res.send channelFlag
 
 	robot.router.post '/heroku/deploy-done', (req, res) ->
+		res.end()
 		robot.brain.once 'save', () =>
 			attachment = {}
 
@@ -68,10 +69,10 @@ module.exports = (robot) ->
 					mrkdwn_in: ['text']
 					}
 
+			robot.logger.debug("Get deploy list");
 			notifyList = robot.brain.get('DEPLOY_NOTIFY_LIST') ? {}
 			Object.keys(notifyList).forEach (key) ->
 				val = @[key]
 				if val
 					robot.messageRoom key, {attachments: [attachment]}
 			, notifyList
-			res.end()
