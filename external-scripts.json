@@ -1,6 +1,7 @@
 [
   "hubot-diagnostics",
   "hubot-github-status",
+  "hubot-gdsn",
   "hubot-help",
   "hubot-redis-brain",
   "hubot-reminder",
