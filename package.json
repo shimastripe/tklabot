@@ -8,7 +8,7 @@
     "coffeescript": "^1.12.7",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
-    "hubot-github-dashboard-slack-notifier": "^1.0.0",
+    "hubot-github-dashboard-slack-notifier": "^1.1.0",
     "hubot-help": "^0.2.2",
     "hubot-redis-brain": "0.0.4",
     "hubot-reminder": "git://github.com/shimastripe/hubot-reminder.git",
